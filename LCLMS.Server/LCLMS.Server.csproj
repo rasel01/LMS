@@ -229,6 +229,8 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentQueryController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -313,6 +315,24 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LCLMS.Model\LCLMS.Model.csproj">
+      <Project>{7a3b8560-cbd4-41f0-aad6-96f34f996f47}</Project>
+      <Name>LCLMS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LCLMS.RequestModel\LCLMS.RequestModel.csproj">
+      <Project>{1ba30a70-6875-40e6-b2c2-2bd17b336c9f}</Project>
+      <Name>LCLMS.RequestModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LCLMS.Service\LCLMS.Service.csproj">
+      <Project>{e511ac41-b797-47cb-93c6-a2326f2c276c}</Project>
+      <Name>LCLMS.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LCLMS.ViewModel\LCLMS.ViewModel.csproj">
+      <Project>{5fe37821-8363-4aad-92e5-3e3c0dc012fb}</Project>
+      <Name>LCLMS.ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
