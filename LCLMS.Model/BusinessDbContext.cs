@@ -1,10 +1,12 @@
 ﻿using LCLMS.Model.Students;
+
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LCLMS.Model.Teachers;
 
 namespace LCLMS.Model
 {
@@ -16,5 +18,6 @@ namespace LCLMS.Model
         }
 
         public DbSet<Student> students { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
     }
 }
