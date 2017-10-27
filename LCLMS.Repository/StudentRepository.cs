@@ -25,6 +25,11 @@ namespace LCLMS.Repository
             return savechanges > 0;
         }
 
+        public IQueryable<Student> Get()
+        {
+            return this.db.students.AsQueryable();
+        }
+
         
 
     }
