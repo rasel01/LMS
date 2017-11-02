@@ -2,10 +2,12 @@
 using LCLMS.Repository;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LCLMS.RequestModel;
+using LCLMS.ViewModel;
 
 namespace LCLMS.Service
 {
@@ -22,12 +24,12 @@ namespace LCLMS.Service
             return repository.Add(student);
         }
 
-        public List<Student> Search(StudentRequestModel request)
+        public List<StudentGridViewModel> Search(StudentRequestModel request)
         {
             //Get Quaryable data 
             IQueryable<Student> students = this.repository.Get();
             //condition apply
-           
+
             if (!string.IsNullOrWhiteSpace(request.Name))
             {
                 students = students.Where(x => x.Name.ToLower().Contains(request.Name.ToLower()));
@@ -55,14 +57,28 @@ namespace LCLMS.Service
                         : students.OrderByDescending(x => x.Phone);
                 }
             }
-            
+
 
 
 
             students = students.Skip((request.Page - 1) * 10).Take(request.PerpageCount);
-            List<Student> list = students.ToList();
+            var list = students.ToList().ConvertAll(x => new StudentGridViewModel(x));
             return list;
         }
+
+        public StudentDetailViewModel Detail(string id)
+        {
+            Student x = this.repository.GetDetails(id);
+            if (x == null)
+            {
+                throw new ObjectNotFoundException();
+            }
+            var vm = new StudentDetailViewModel(x);
+            return vm;
+
+        }
+
+
 
     }
 }

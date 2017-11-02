@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace LCLMS.RequestModel
 {
-    public class TeacherRequestModel
+    public class TeacherRequestModel : BaseRequestModel
     {
+        public TeacherRequestModel()
+        {
+                    
+        }
+
+        public string Name { get; set; }
     }
 }

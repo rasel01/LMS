@@ -30,7 +30,10 @@ namespace LCLMS.Repository
             return this.db.students.AsQueryable();
         }
 
-        
 
+        public Student GetDetails(string id)
+        {
+            return this.db.students.Find(id);
+        }
     }
 }
