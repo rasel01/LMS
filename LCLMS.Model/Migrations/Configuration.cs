@@ -12,7 +12,7 @@ namespace LCLMS.Model.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(BusinessDbContext context)
+        protected override void Seed(LCLMS.Model.BusinessDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

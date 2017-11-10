@@ -17,7 +17,9 @@ namespace LCLMS.Model
                 
         }
 
-        public DbSet<Student> students { get; set; }
+        public DbSet<Student> Students { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
+
+        
     }
 }

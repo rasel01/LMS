@@ -13,11 +13,12 @@ namespace LCLMS.Service
 {
     public class StudentService
     {
-        private StudentRepository repository;
+       
+        private BaseRepository<Student> repository;
 
         public StudentService()
         {
-            this.repository = new StudentRepository();
+            this.repository = new BaseRepository<Student>();
         }
         public bool Add(Student student)
         {

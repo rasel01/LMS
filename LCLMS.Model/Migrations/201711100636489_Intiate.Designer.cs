@@ -7,13 +7,13 @@ namespace LCLMS.Model.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class teacheradded : IMigrationMetadata
+    public sealed partial class Intiate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(teacheradded));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Intiate));
         
         string IMigrationMetadata.Id
         {
-            get { return "201710170805322_teacher added"; }
+            get { return "201711100636489_Intiate"; }
         }
         
         string IMigrationMetadata.Source

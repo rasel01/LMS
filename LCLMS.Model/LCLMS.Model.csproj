@@ -49,13 +49,9 @@
   <ItemGroup>
     <Compile Include="BusinessDbContext.cs" />
     <Compile Include="Entity.cs" />
-    <Compile Include="Migrations\201710170548314_createDB.cs" />
-    <Compile Include="Migrations\201710170548314_createDB.Designer.cs">
-      <DependentUpon>201710170548314_createDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710170805322_teacher added.cs" />
-    <Compile Include="Migrations\201710170805322_teacher added.Designer.cs">
-      <DependentUpon>201710170805322_teacher added.cs</DependentUpon>
+    <Compile Include="Migrations\201711100636489_Intiate.cs" />
+    <Compile Include="Migrations\201711100636489_Intiate.Designer.cs">
+      <DependentUpon>201711100636489_Intiate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,11 +63,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710170548314_createDB.resx">
-      <DependentUpon>201710170548314_createDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710170805322_teacher added.resx">
-      <DependentUpon>201710170805322_teacher added.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711100636489_Intiate.resx">
+      <DependentUpon>201711100636489_Intiate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

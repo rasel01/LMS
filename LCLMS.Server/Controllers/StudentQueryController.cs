@@ -21,7 +21,7 @@ namespace LCLMS.Server.Controllers
         
         public IHttpActionResult Post(StudentRequestModel request)
         {
-            List<Student> students = service.Search(request);
+            var students = service.Search(request);
             return this.Ok(students);
         }
     }
